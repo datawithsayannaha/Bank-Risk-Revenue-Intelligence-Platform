@@ -12,7 +12,7 @@ An end-to-end Business Intelligence project built using:
 
 👉 (Add your Power BI link here)
 
-[View Dashboard](YOUR_LINK_HERE)
+[View Dashboard](https://app.powerbi.com/links/4p8HkIVi2M?ctid=e66d4a36-e7af-4202-abd5-360d3aa12b25&pbi_source=linkShare)
 
 
 ---
@@ -30,8 +30,8 @@ This project is a complete **Banking Risk Analytics System**.
 
 I started with raw banking datasets (credit risk + customer churn).  
 Then I cleaned and transformed the data using SQL Server.  
-After that, I used Python to create advanced business features and scoring logic.  
-Finally, I built a **7-page Power BI dashboard** to analyze:
+After that, I used Python for feature engineering and basic machine learning style scoring logic to create churn probability, customer value score, debt pressure score, and predicted CLTV. 
+Finally, I built a **Power BI dashboard** to analyze:
 
 - Credit risk  
 - Customer behavior  
@@ -43,7 +43,14 @@ Finally, I built a **7-page Power BI dashboard** to analyze:
 
 ## 🗂️ Project Workflow
 
-**Raw Data → SQL Cleaning → Python Feature Engineering → Power BI Dashboard**
+**Raw Data → SQL Cleaning → Python Feature Engineering/Basic ML → Power BI Dashboard**
+
+---
+
+
+## 🛤️ Project Roadmap
+
+![Project Roadmap](images/Diagram.png)
 
 ---
 
@@ -52,7 +59,7 @@ Finally, I built a **7-page Power BI dashboard** to analyze:
 | Tool | Purpose |
 |------|--------|
 | SQL Server | Data cleaning, joins, views |
-| Python | Feature engineering, scoring |
+| Python | Feature engineering, basic ML scoring, customer segmentation |
 | Power BI | Dashboard & visualization |
 | Power Query | Minor data transformation |
 | DAX | KPI & business calculations |
@@ -113,28 +120,42 @@ This project uses two main datasets:
 ### Input
 - SQL output (cleaned data)
 
-### What I did in Python
-Created advanced business features:
+### Basic ML / Scoring Logic Used
 
+In Python, I used basic machine learning style logic and business rules to create customer-level risk and value scores.
+
+The goal was not only to clean data, but also to create useful predictive features for Power BI analysis.
+
+### ML-Based Features Created
+
+- churn_probability  
+- default_probability  
+- debt_pressure_score  
 - customer_value_score  
 - predicted_cltv_12m  
-- debt_pressure_score  
-- churn_probability  
 - customer_value_segment  
+- churn_risk_tier  
+- credit_risk_tier  
+
+These features helped me identify risky customers, high-value customers, churn-prone customers, and revenue at risk.
 
 ### Feature Engineering Logic
 - Combined income, credit, and behavior  
 - Created scoring models  
-- Built segmentation (Low / Medium / High / Premium)  
+- Built segmentation (Low / Medium / High / Premium)
+
+
 
 ### Output
-- Final dataset for Power BI  
+- Final dataset **final_bank_ml_scores** for Power BI  
 
 ---
 
 ## 🧩 Data Model (Power BI)
 
 ### Fact Table
+- vw_bank_customer_mapping
+- vw_customer_behavior_summary
 - final_bank_ml_scores  
 
 ### Key Fields
@@ -149,7 +170,7 @@ Created advanced business features:
 
 ## 📊 DAX Measures
 
-I created **70+ DAX measures**, including:
+I created **DAX measures**, including:
 
 - Total Customers  
 - Default Rate  
@@ -249,7 +270,29 @@ Includes:
 
 ## 📸 Dashboard Preview
 
-👉 (Add screenshots here)
+### 🔹 Strategic Banking Overview
+![Strategic Banking Overview](images/Strategic_Banking_Overview.png)
+
+### 🔹 Credit Risk Intelligence
+![Credit Risk Intelligence](images/Credit_Risk_Intelligence.png)
+
+### 🔹 Behavioral Risk Analytics
+![Behavioral Risk Analytics](images/Behavioral_Risk_Analytics.png)
+
+### 🔹 Customer Churn & Retention
+![Customer Churn & Retention](images/Customer_Churn_and_Retention.png)
+
+### 🔹 Operational Risk & Monitoring
+![Operational Risk & Monitoring](images/Operational_Risk_and_Monitoring.png)
+
+### 🔹 Revenue, CLTV & Customer Value
+![Revenue, CLTV & Customer Value](images/Revenue_CLTV_and_Customer_Value.png)
+
+### 🔹 Executive Insights & Recommendations
+![Executive Insights & Recommendations](images/Executive_Insights_and_Recommendations.png)
+
+---
+
 
 ---
 
@@ -267,8 +310,8 @@ Includes:
 
 - SQL Data Cleaning  
 - Data Modeling  
-- Python Feature Engineering  
-- DAX (Basic → Advanced)  
+- Python Feature Engineering/ Basic ML  
+- DAX  
 - Power BI Dashboard Design  
 - Business Analysis  
 - Data Storytelling  
@@ -293,5 +336,5 @@ It helps businesses:
 
 **Sayan Naha**
 
-📧 Email: snsayan2012@gmail.com  
-🔗 LinkedIn: (Add link)
+📧 **Email:** snsayan2012@gmail.com  
+🔗 **LinkedIn:** [Sayan Naha](https://www.linkedin.com/in/sayan-naha/)
